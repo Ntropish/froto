@@ -33,6 +33,14 @@ export const contains = curry((range, value) => {
   return value === clamp(range, value)
 })
 
+export const containsRange = curry((container, range) => {
+  return (
+    contains(container, range[0]) ||
+    contains(container, range[0]) ||
+    contains(range, container[0])
+  )
+})
+
 export const valueIn = curry((value, range) => contains(range, value))
 
 export const clamp = curry((range, value) => {
