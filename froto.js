@@ -36,7 +36,7 @@ export const contains = curry((range, value) => {
 export const containsRange = curry((container, range) => {
   return (
     contains(container, range[0]) ||
-    contains(container, range[0]) ||
+    contains(container, range[1]) ||
     contains(range, container[0])
   )
 })
