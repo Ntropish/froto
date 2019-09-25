@@ -22,6 +22,7 @@ export const scale = curry((amount, origin, range) => {
 })
 
 export const add = curry((a, b) => [a[0] + b[0], a[1] + b[1]])
+export const sub = curry((a, b) => [a[0] - b[0], a[1] - b[1]])
 
 export const multiply = curry((amount, range) => [
   amount * range[0],
